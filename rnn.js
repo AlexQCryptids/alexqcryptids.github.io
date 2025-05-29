@@ -1,11 +1,24 @@
+// High-DPI Canvas Setup Function
+function setupCanvas(id, cssSize = 800) {
+  const canvas = document.getElementById(id);
+  const dpr = window.devicePixelRatio || 1;
+  canvas.style.width = cssSize + "px";
+  canvas.style.height = cssSize + "px";
+  canvas.width = cssSize * dpr;
+  canvas.height = cssSize * dpr;
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+  return { ctx, cssSize };
+}
 
-const canvas = document.getElementById('rnnCanvas');
-const ctx = canvas.getContext('2d');
-const N = 50, R = 300, K = 3;
-const centerX = canvas.width / 2, centerY = canvas.height / 2;
-const dt = 0.1, tau = 30, g = 10;
+// Setup
+const { ctx, cssSize } = setupCanvas("rnnCanvas", 420);
+const N = 100, R = 150, K = 7;
+const centerX = cssSize / 2, centerY = cssSize / 2;
+const dt = 0.2, tau = 30, g = 10;
 const std = g / Math.sqrt(N);
 
+// RNN Model
 let J = Array.from({length: N}, () => Array.from({length: N}, () => std * (Math.random() * 2 - 1)));
 let r = Array.from({length: N}, () => Math.random() * 2 - 1);
 
@@ -27,13 +40,30 @@ function step() {
 }
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, cssSize, cssSize);
+
+  
+  // Caption below
+  ctx.fillStyle = "white";
+  ctx.font = "12px sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText("A recurrent neural network with all-to-all connection.", cssSize / 2, cssSize - 30);
+  ctx.fillText("Brightness representing neural acitivity. Purple: Excitatory. Cyan: Inhibitory ", cssSize / 2, cssSize -16);
+  ctx.font = "italic 10px sans-serif";
+  ctx.fillText("Haim Sompolinsky et al. Chaos in Random Neural Networks. Physical Review Letters (1988)", cssSize / 2, cssSize-2 );
   for (let i = 0; i < N; i++) {
     let [x, y] = positions[i];
-    let activity = Math.tanh(Math.abs(r[i]));
-    let color = `hsl(${60 + 120 * (1 - activity)}, 100%, ${30 + 50 * activity}%)`;
+    //let activity = Math.tanh(r[i]);
+    let activity = r[i];
+
+    let hue = activity >= 0 ? 180 : 300;
+    let lightness = 0 + 5*  Math.abs(activity);
+    let color = `hsl(${hue}, 100%, ${lightness}%)`;
+    
+    //let color = `hsl(${60 + 120 * (1 - activity)}, 100%, ${30 + 50 * activity}%)`;
+
     ctx.beginPath();
-    ctx.arc(x, y, 10, 0, 2 * Math.PI);
+    ctx.arc(x, y, 5, 0, 2 * Math.PI);
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -49,8 +79,8 @@ function draw() {
       ctx.moveTo(x1, y1);
       ctx.lineTo(x2, y2);
       ctx.strokeStyle = J[i][j] > 0 ? 'red' : 'blue';
-      ctx.lineWidth = Math.abs(J[i][j]) * 2;
-      ctx.globalAlpha = 0.3;
+      ctx.lineWidth = Math.abs(J[i][j]) * 0.3;
+      ctx.globalAlpha = 0.5;
       ctx.stroke();
       ctx.globalAlpha = 1.0;
     }
@@ -59,8 +89,12 @@ function draw() {
 
 function loop() {
   step();
+  step();
+  step();
+  step();
   draw();
   requestAnimationFrame(loop);
 }
 
 loop();
+

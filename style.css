@@ -45,8 +45,9 @@ body {
   }
   
   #rnnCanvas {
-    border: 1px solid #555;
-    margin: 20px auto;
+
+    border: 1px solid #222;
+    margin: 5px auto;
     display: block;
-    background-color: black;
+    background-color: #222;
   }
