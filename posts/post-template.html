@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loading...</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      color: #222;
+    }
+    a {
+      color: #007acc;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    h1 {
+    font-size: 2em;
+    }
+    h2 {
+    font-size: 1.5em;
+    }
+    h3 {
+    font-size: 1.2em;
+    }
+    /* all same color */
+    h1, h2, h3 {
+    color: #222;
+    }
+  </style>
+</head>
+<body>
+  <header><h1 id="post-title">Loading...</h1></header>
+  <main>
+    <article id="content">Loading content...</article>
+  </main>
+  <footer style="text-align: center; margin-top: 3rem;">
+    <a href="../blog.html">← Back to Blog</a>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const post = params.get('post');
+
+    if (!post) {
+      document.getElementById('content').innerHTML = "<p>Error: No post specified.</p>";
+    } else {
+      fetch(post)
+        .then(res => res.text())
+        .then(md => {
+          document.getElementById('content').innerHTML = marked.parse(md);
+          const title = post.replace('.md', '').replace(/-/g, ' ');
+          document.title = title;
+          document.getElementById('post-title').textContent = title;
+        })
+        .catch(err => {
+          document.getElementById('content').innerHTML = "<p>Error loading post.</p>";
+        });
+    }
+  </script>
+</body>
+</html>

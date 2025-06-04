@@ -78,7 +78,7 @@ function draw() {
       ctx.beginPath();
       ctx.moveTo(x1, y1);
       ctx.lineTo(x2, y2);
-      ctx.strokeStyle = J[i][j] > 0 ? 'red' : 'blue';
+      ctx.strokeStyle = J[i][j] > 0 ? '#b48ffa'  : '#b48ffa' ;
       ctx.lineWidth = Math.abs(J[i][j]) * 0.3;
       ctx.globalAlpha = 0.5;
       ctx.stroke();
