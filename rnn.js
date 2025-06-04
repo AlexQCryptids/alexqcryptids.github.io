@@ -92,6 +92,7 @@ function loop() {
   step();
   step();
   step();
+  step();
   draw();
   requestAnimationFrame(loop);
 }
