@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Optima;
     background-color: #222;
     color: #eee;
     margin: 0;
@@ -7,6 +7,7 @@ body {
   }
   
   header {
+    font-family: Copperplate;
     text-align: center;
     margin-bottom: 40px;
   }
@@ -16,9 +17,10 @@ body {
   }
   
   h2 {
-    margin-top: 30px;
-    color: #0ff;
+    margin-top: 5px;
+    color: #00CED1;
   }
+  
   
   footer {
     text-align: center;
@@ -51,3 +53,47 @@ body {
     display: block;
     background-color: #222;
   }
+
+  .contact-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 0px;
+  }
+  
+  .contact-icons a {
+    font-size: 1.7rem;         /* Bigger icon size */
+    color: #444;               /* Default color */
+    transition: color 0.3s;
+  }
+  
+  .contact-icons a:hover {
+    color: #1DA1F2;            /* Hover color (Twitter blue or whatever you want) */
+  }
+
+  #intro {
+    margin-top: -20px; /* Move it up */
+    text-align: center; /* Center the text */
+  }
+  
+  .intro-text {
+    font-size: 1.rem;
+    line-height: 1.3;
+  }
+  
+/*
+  .blog-link {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 8px;
+  }*/
+  
+  .blog-link .blog-date {
+    color: #999; /* Set to any soft tone you like */
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin-left: 8px;
+  }
+  

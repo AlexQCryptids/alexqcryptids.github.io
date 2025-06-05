@@ -45,9 +45,9 @@ function draw() {
   
   // Caption below
   ctx.fillStyle = "white";
-  ctx.font = "12px sans-serif";
+  ctx.font = "12px Optima";
   ctx.textAlign = "center";
-  ctx.fillText("A recurrent neural network with all-to-all connection.", cssSize / 2, cssSize - 30);
+  ctx.fillText("A recurrent neural network with fixed all-to-all connection.", cssSize / 2, cssSize - 30);
   ctx.fillText("Brightness representing neural acitivity. Purple: Excitatory. Cyan: Inhibitory ", cssSize / 2, cssSize -16);
   ctx.font = "italic 10px sans-serif";
   ctx.fillText("Haim Sompolinsky et al. Chaos in Random Neural Networks. Physical Review Letters (1988)", cssSize / 2, cssSize-2 );

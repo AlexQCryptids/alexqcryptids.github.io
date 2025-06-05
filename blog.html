@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Optima;
       margin: 0;
       background:  #222;
     }
@@ -29,16 +29,17 @@
       display: block;
       margin-bottom: 1rem;
       text-decoration: none;
-      color: #007acc;
+      color: #00CED1;
       border-left: 4px solid transparent;
       padding-left: 0.5rem;
       transition: all 0.2s ease;
     }
-    .blog-link:hover {
+    
+    /*.blog-link:hover {
       color: #007acc;
       border-color: #007acc;
       background: #eaf4ff;
-    }
+    }*/
     footer {
       text-align: center;
       padding: 1rem;
@@ -48,13 +49,13 @@
   </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">About</a>
-        <a href="games.html">Games</a>
-        <a href="research.html">Research</a>
-        <a href="blog.html">Writing</a>
-        <a href="https://drive.google.com/file/d/1ZrHIUeA1-yUT5CIO1qmaK0Zt7GDArgh6/view?usp=share_link">CV</a>
-      </nav>
+  <nav>
+    <a href="index.html">About</a>
+    <a href="games.html">Games</a>
+    <a href="research.html">Research</a>
+    <a href="blog.html">Writing</a>
+    <a href="/files/resume_25Summer.pdf">CV</a>
+  </nav>
   <header>
     <h1>My Writings</h1>
     <p> i'm just a loud mouth</p>
@@ -62,18 +63,36 @@
 
   <main>
     <div class="column">
-      <p> hdsf </p>
-      <a href="posts/post-template.html?post=pruning-rnn.md" class="blog-link">Pruning RNNs with Biological Constraints</a>
-      <a href="posts/post-template.html?post=insect-vision.md" class="blog-link">Modeling Insect Visual Systems</a>
-      <a href="posts/post-template.html?post=matrix-spectra.md" class="blog-link">Visualizing Eigenvalue Spectra</a>
+      <p> Science </p>
+      
+      <div class="blog-item">
+        <a href="posts/post-template.html?post=pruning-rnn.md" class="blog-link">
+          Mean Field Theory in Neuroscience
+          <span class="blog-date"> June 1, 2025</span>
+        </a>
+      </div>
+      
     </div>
+  
     <div class="column">
-      <p> hdsf </p>
-      <a href="posts/post-template.html?post=rnn-canvas.md" class="blog-link">Neural Visualizations in HTML Canvas</a>
-      <a href="posts/post-template.html?post=dream-realism.md" class="blog-link">Dreams as Virtual Realities</a>
-      <a href="posts/post-template.html?post=academic-mistakes.md" class="blog-link">What I Learned from Missing a Deadline</a>
+      <p> Misc </p>
+      
+      <div class="blog-item">
+        <a href="posts/post-template.html?post=pruning-rnn.md" class="blog-link">
+          Andor is cheap
+          <span class="blog-date">— June 1, 2025</span>
+        </a>
+      </div>
+      
+      <div class="blog-item">
+        <a href="posts/post-template.html?post=pruning-rnn.md" class="blog-link">
+          Geocentric is elegent
+          <span class="blog-date">— June 1, 2025</span>
+        </a>
+      </div>
     </div>
   </main>
+  
 
   <footer>
     &copy; 2025 Alex Q
