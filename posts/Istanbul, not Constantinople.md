@@ -1,4 +1,4 @@
-# Istanbul, not Constantinople
+
 
 So I went to Turkey last winter break with 6.5 days in Istanbul and 2.5 days in Cappodocia, and I should have wrote this blog earlier. But I'm an insanely lazy guy, and haven't really started my writing until mid summer. Anyway, memory won't easliy fade away as the so called 'history' in Istanbul, I would say even now I can still vibe with the city despite I'm miles away. 
 
