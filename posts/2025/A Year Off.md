@@ -20,7 +20,7 @@ So byebye my neuroscientist career, for now or maybe forever. I'm going to creat
 
 
 
-
+<img src="https://alexqcryptids.github.io/posts/2025/a_year_off.jpeg" alt="a year off" style="zoom:20%;" />
 
 
 
