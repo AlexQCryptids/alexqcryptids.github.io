@@ -1,4 +1,10 @@
-*Me? I've always loved porters. Through freezing rain and biting wind, across rivers, mountains, and endless deserts. They come to deliver something priceless. A glimpse of a life I've never known. They're my window - my sole connection to the outside world. And I know they'll be back again today.  --Death Stranding 2*
+*Me? I've always loved porters.*
+
+*Through freezing rain and biting wind, across rivers, mountains, and endless deserts. They come to deliver something priceless. A glimpse of a life I've never known. They're my window - my sole connection to the outside world.*
+
+*And I know they'll be back again today.*
+
+*--Death Stranding 2*
 
 ---
 
@@ -23,6 +29,5 @@ So byebye my neuroscientist career, for now or maybe forever. I'm going to creat
 <p align="center">
 <img src="https://alexqcryptids.github.io/posts/2025/a_year_off.jpeg" alt="a year off" style="zoom:15%;" /> 
 </p>
-
 
 
