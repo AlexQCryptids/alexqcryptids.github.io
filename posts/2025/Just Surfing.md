@@ -10,9 +10,11 @@ Dusk was falling, but the twilight was faint. The wind carried distant waves gen
 
 It was that moment that I thought, 'Even if I can't catch any wave, just sitting here chilling would be great.' This isn’t the first time I’ve had this thought, but it’s the first time it became so clear that I found myself regretting not having realized it sooner. 
 
-But I didn't rest too long. Another wave was coming. I turned around, ready to paddle for another takeoff.
+But I didn't rest too long. Soon another wave was coming. I turned around, ready to paddle for another takeoff.
 
 
 <p align="center">
-<img src="https://alexqcryptids.github.io/posts/2025/just_surfing.jpeg" alt="a year off" style="zoom:15
+<img src="https://alexqcryptids.github.io/posts/2025/just_surfing.jpeg" alt="just surfing" style="zoom:15%;" /> 
+</p>
+
 
